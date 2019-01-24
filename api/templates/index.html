@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+    {% block title %}{{ super() }} - Página inicial da API {% endblock %}
+
+    {% block content %}
+    <article>
+        <h1>ICan.js - API de modelos🍕</h1>
+        <div>
+            <p>Esta é uma API aberta para a distribuição dos modelos de redes neurais utilizados nos projetos da
+                biblioteca ICan.js</p>
+            <br>
+            <p>Modelos disponíveis na API:</p>
+            <ul>
+                <li><a href="/models/lecun98">Convolutional Neural Network (LeCun, 1998)</a></li>
+                <li><a href="/models/mobilenetv1">MobileNet V1 (Howard, 2017)</a></li>
+            </ul>
+            <p>Links úteis</p>
+            <ul>
+                <li><a href="#">Documentação da API</a></li>
+                <li><a href="#">Sobre o projeto ICan.js</a></li>
+            </ul>
+        </div>
+    </article>
+    {% endblock %}
