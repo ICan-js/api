@@ -18,9 +18,18 @@ def mobilenetv1():
 @app.route("/models/mobilenetv1/<file>", methods=["GET"])
 @cross_origin()
 def mobilenetv1_model(file):
-    """Handler para a distribuição dos arquivos do modelo
-    :param file:
-    :return:
+    """Endpoint para a recuperação dos arquivos do modelo MobileNet V1
+    ---
+    parameters:
+      - name: file
+        in: path
+        type: string
+        enum: ['model.json', 'group1-shardXofN']
+        required: true
+        description: Os parâmetros podem variar desde o arquivo de especificação, até mesmo os arquivos contendo os pesos sinápticos do modelo. É recomendado que este seja consumido diretamente pelo Tensorflow.js
+    responses:
+      200:
+        description: Retorna o arquivo especificado na requisição
     """
 
     path = os.path.join(app.config["BASE_DIR"], "api/models/mobilenetv1")
