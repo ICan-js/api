@@ -10,10 +10,17 @@
                 em seu artigo <i>Gradient-based learning applied to document recognition</i>, disponível em
                 <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf" target="_blank">aqui</a>
             </p>
-            <ul>
-                <!--ToDo: Trocar este link por um code block explicando como consumir o modelo-->
-                <li><a href="#">Verificar na documentação como consumir este modelo</a></li>
-            </ul>
+            
+				<p>Abaixo é exemplificado como consumir este modelo utilizando Tensorflow.js</p>
+				<p>Primeiro carregue o Tensorflow.js em seu código HTML</p>
+				<pre><code class="html">
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.1/dist/tf.min.js&#x22;&#x3E;&#x3C;/script&#x3E;				
+				</code></pre>
+				
+				<p>Feito isto, basta adicionar em seu script o código abaixo para o carregamento do modelo</p>
+				<pre><code class="javascript">
+const model = tf.loadModel("https://ican-api.herokuapp.com/models/lecun98/model.json");
+				</code></pre>
         </div>
     </article>
     {% endblock %}
