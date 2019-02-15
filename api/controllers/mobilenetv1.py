@@ -24,7 +24,7 @@ def mobilenetv1_model(file):
       - name: file
         in: path
         type: string
-        enum: ['model.json', 'group1-shardXofN']
+        enum: ['model.json', 'group1-shard1of6', 'group1-shard2of6', 'group1-shard3of6', 'group1-shard4of6', 'group1-shard5of6', 'group1-shard6of6']
         required: true
         description: Os parâmetros podem variar desde o arquivo de especificação, até mesmo os arquivos contendo os pesos sinápticos do modelo. É recomendado que este seja consumido diretamente pelo Tensorflow.js
     responses:

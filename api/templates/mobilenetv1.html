@@ -7,14 +7,18 @@
         <h2>MobileNet V1 (Howard, 2017)</h2>
         <div>
             <p>MobileNet é um modelo de rede neural convolucional leve, por conta da utilização da técnica de convolução profunda separável. No ICan.js este modelo foi retreinado com um conjunto de dados de Libras captados com a ajuda de 9 colaboradores. O artigo da MobileNet está disponível em
-            <a href="https://arxiv.org/pdf/1704.04861.pdf" target="_blank">aqui</a>
-            <ul>
-
-                
-
-                <!--ToDo: Trocar este link por um code block explicando como consumir o modelo-->
-                <li><a href="#">Verificar na documentação como consumir este modelo</a></li>
-            </ul>
+            <a href="https://arxiv.org/pdf/1704.04861.pdf" target="_blank">aqui</a>.
+            
+            <p>Abaixo é exemplificado como consumir este modelo utilizando Tensorflow.js</p>
+            <p>Primeiro carregue o Tensorflow.js em seu código HTML</p>
+            <pre><code class="code-block html">
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.1/dist/tf.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+            </code></pre>
+                    
+            <p>Feito isto, basta adicionar em seu script o código abaixo para o carregamento do modelo</p>
+            <pre><code class="code-block javascript">
+const model = tf.loadModel("https://ican-api.herokuapp.com/models/mobilenetv1/model.json");
+            </code></pre>   
         </div>
     </article>
     {% endblock %}

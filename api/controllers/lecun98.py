@@ -29,6 +29,7 @@ def lecun98_model(file):
     responses:
       200:
         description: Retorna o arquivo especificado na requisição
+    deprecated: true
     """
     path = os.path.join(app.config["BASE_DIR"], "api/models/lecun98")
 
