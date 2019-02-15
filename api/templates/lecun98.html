@@ -8,19 +8,23 @@
         <div>
             <p>O modelo distribuido neste endereço foi treinado utilizando a arquitetura especificada por Yann Lecun,
                 em seu artigo <i>Gradient-based learning applied to document recognition</i>, disponível em
-                <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf" target="_blank">aqui</a>
+                <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf" target="_blank">aqui</a>.
             </p>
             
 				<p>Abaixo é exemplificado como consumir este modelo utilizando Tensorflow.js</p>
 				<p>Primeiro carregue o Tensorflow.js em seu código HTML</p>
-				<pre><code class="html">
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.1/dist/tf.min.js&#x22;&#x3E;&#x3C;/script&#x3E;				
-				</code></pre>
+				<pre><code class="code-block html">
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.1/dist/tf.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+                </code></pre>
 				
 				<p>Feito isto, basta adicionar em seu script o código abaixo para o carregamento do modelo</p>
-				<pre><code class="javascript">
+				<pre><code class="code-block javascript">
 const model = tf.loadModel("https://ican-api.herokuapp.com/models/lecun98/model.json");
 				</code></pre>
         </div>
     </article>
+
+    <script>
+        alert("Oii! Só lembrando que este modelo está indisponível");
+    </script>
     {% endblock %}
